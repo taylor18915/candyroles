@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+@if (User.IsInRole("teacher"))
+{
+    <section>
+        <h1>Welcome,teacher</h1>
+    </section>
+}
+else if (User.IsInRole("student"))
+{
+<section>
+<h1> Welcome teacher</h1>
+</section>
+}
+else if (User.IsInRole("PRINICIPAL"))
+{
+<section>
+    <h1>PRINICIPAL</h1>
+</section>
+}
+
